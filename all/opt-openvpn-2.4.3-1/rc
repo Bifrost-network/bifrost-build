@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# For generation CA and certs you can use EasyRsa: https://github.com/OpenVPN/easy-rsa
+#
+
+PKG=openvpn
+BINDIR=/opt/openvpn/sbin
+
+case "$1" in
+    start)
+        printf "\nstarting: $PKG"
+        $BINDIR/openvpn --mode server --config /opt/openvpn/etc/server.conf --daemon
+        ;;
+    stop)
+        printf "\nstopping: $PKG"
+	killall openvpn
+        ;;
+    *)
+        printf "\n\tUsage: $0 < start | stop >\n\n"
+        ;;
+esac
+
