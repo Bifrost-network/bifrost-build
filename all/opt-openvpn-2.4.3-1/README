@@ -1,0 +1,11 @@
+
+If you want to NAT the vpn traffic out of the server.
+Add to /filter/fwrules:
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+iptables -A FORWARD -i eth0 -o tun0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+There is an example config file if you want the server to only push selected nets to the client:
+/opt/openvpn/etc/server-selected-nets.conf
+
+OpenVPN is certificate based.
+If you dont already have a CA then EasyRSA provides a simple CA that works under Bifrost.

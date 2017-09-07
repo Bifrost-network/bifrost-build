@@ -9,6 +9,7 @@ BINDIR=/opt/openvpn/sbin
 case "$1" in
     start)
         printf "\nstarting: $PKG"
+	modprobe tun
         $BINDIR/openvpn --mode server --config /opt/openvpn/etc/server.conf --daemon
         ;;
     stop)
