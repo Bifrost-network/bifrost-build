@@ -1,0 +1,10 @@
+Setup keys.
+
+Create passwd:
+ocpasswd -c /opt/ocserv/passwd USERNAME
+
+auth = "plain[passwd=/opt/ocserv/passwd]"
+tcp-port = 1443
+udp-port = 1443
+server-cert = /opt/ocserv/etc/server.crt
+server-key = /opt/ocserv/etc/server.key
