@@ -50,7 +50,7 @@ cd $BUILDDIR || exit 1
 # Compile
 mkdir -p var/lib
 cd var/lib || exit 1
-/opt/git/bin/git clone git://github.com/jelaas/bifrost-build-x86_64.git build || exit 1
+/opt/git/bin/git clone git://github.com/Bifrost-network/bifrost-build-x86_64.git build || exit 1
 
 #########
 # Install into dir under /var/tmp/install
