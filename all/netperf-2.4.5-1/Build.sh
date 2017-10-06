@@ -5,8 +5,8 @@ PKG=netperf-2.4.5-1 # with build version
 
 # PKGDIR is set by 'pkg_build'. Usually "/var/lib/build/all/$PKG".
 PKGDIR=${PKGDIR:-/var/lib/build/all/$PKG}
-SRC=/var/spool/src/$SRCVER.tar.bz2
-BUILDDIR=/var/tmp/src/$SRCVER
+SRC=/var/spool/src/$SRCVER.tar.gz
+BUILDDIR=/var/tmp/src/netperf-$SRCVER
 DST="/var/tmp/install/$PKG"
 
 #########
@@ -21,7 +21,7 @@ cd $(dirname $BUILDDIR); tar xf $SRC
 
 #########
 # Patch
-cd $BUILDDIR
+cd $BUILDDIR || exit 1
 libtool_fix-1
 # patch -p1 < $PKGDIR/mypatch.pat
 
