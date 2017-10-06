@@ -5,7 +5,7 @@ PKG=$SRCVER-1 # with build version
 
 # PKGDIR is set by 'pkg_build'. Usually "/var/lib/build/all/$PKG".
 PKGDIR=${PKGDIR:-/var/lib/build/all/$PKG}
-SRC=/var/spool/src/$SRCVER-src.tar.bz2
+SRC=/var/spool/src/$SRCVER-src.tar.gz
 BUILDDIR=/var/tmp/src/ncftp-3.2.5
 DST="/var/tmp/install/$PKG"
 
