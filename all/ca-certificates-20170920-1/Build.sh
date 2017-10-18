@@ -43,6 +43,8 @@ mkdir -p $DST/etc/ssl || exit 1
 mkdir -p $DST/etc/ssl/certs || exit 1
 cp $SRC $DST/etc/ssl/ca-bundle.crt || exit 1
 ln -s /etc/ssl/ca-bundle.crt $DST/etc/ssl/certs/ca-certificates.crt || exit 1
+mkdir -p $DST/etc/pki/tls/certs || exit 1
+ln -s /etc/ssl/ca-bundle.crt $DST/etc/pki/tls/certs/ca-bundle.crt || exit 1
 
 #########
 # Convert man-pages
