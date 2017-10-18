@@ -173,6 +173,7 @@ untar vers-1-1
 untar arping-2.09-1
 untar arp-monitor-1.1-1
 untar arpwatch-2.1a15-1
+untar ca-certificates-20170920-1
 untar conntrack-tools-0.9.14-2
 untar curl-7.51.0-1
 untar ipgrab-0.9.10-1
