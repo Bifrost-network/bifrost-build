@@ -6,6 +6,7 @@ BINDIR=/opt/ocserv/sbin
 case "$1" in
     start)
         printf "\nstarting: $PKG"
+	modprobe tun
         $BINDIR/ocserv -c /opt/ocserv/etc/ocserv.conf
         ;;
     stop)
