@@ -83,7 +83,7 @@ untar bridge-utils-1.4-1
 untar dhcp-4.1-ESV-R11-2
 untar dhclient-script-1
 untar dhcpcd-4.0.15-2
-untar dnsmasq-2.78-1
+untar dnsmasq-2.79-1
 untar ethtool-v3.16-1
 untar inetutils-1.9.1-1 ./bin/tftp
 untar iproute2-4.9.0-1
