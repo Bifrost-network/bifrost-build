@@ -1,0 +1,7 @@
+FRR suite, statically linked with musl libc.
+
+You MUST adapt the rc.frr script in order for it to
+start the subservices you want.  Simply (un)comment, or
+add if missing, the services of interest.
+
+Please note that this package the general package starter.
