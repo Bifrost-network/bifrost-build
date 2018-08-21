@@ -201,6 +201,7 @@ untar qemu-1.4.0-1 ./usr/bin/qemu-img
 
 untar kernel-x86_32-4.12.0-2
 untar kernel-x86_64-4.12.0-2
+untar linux-firmware-18.8.21-1
 
 untar extlinux-6.02-1
 untar grub-2.00-2
