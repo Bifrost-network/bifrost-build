@@ -89,6 +89,7 @@ untar inetutils-1.9.1-1 ./bin/tftp
 untar iproute2-4.9.0-1
 untar iptables-1.4.21-3
 untar iputils-s20100418-2; chmod +s ./sbin/ping; chmod +s ./sbin/ping6
+untar iw-4.9-1
 untar libteam-1.12-1
 untar netkit-base-0.17-1 ./sbin/inetd
 untar net-tools-1.60-2
