@@ -55,6 +55,16 @@ cd hostapd || exit 1
 cp defconfig .config || exit 1
 sed -i 's/#CONFIG_DRIVER_NL80211/CONFIG_DRIVER_NL80211/' .config
 sed -i 's/#CONFIG_LIBNL32=y/CONFIG_LIBNL32=y/' .config
+echo "CONFIG_EAP_PSK=y" >> .config
+echo "CONFIG_EAP_PWD=y" >> .config
+echo "CONFIG_EAP_GPSK=y" >> .config
+echo "CONFIG_EAP_GPSK_SHA256=y" >> .config
+echo "CONFIG_IEEE80211R=y" >> .config
+echo "CONFIG_IEEE80211N=y" >> .config
+echo "CONFIG_IEEE80211AC=y" >> .config
+echo "CONFIG_ACS=y" >> .config
+echo "CONFIG_MBO=y" >> .config
+
 echo "LIBS += -static -lm" >> .config
 echo "LIBS_c += -static" >> .config
 
@@ -79,6 +89,7 @@ echo yes > $OPTDIR/etc/config.flags/hostapd
 echo $PKG > $OPTDIR/pkgversion
 cp -p $PKGDIR/rc $OPTDIR/rc.d/rc.hostapd
 chmod +x $OPTDIR/rc.d/rc.hostapd
+cp defconfig $OPTDIR/etc || exit 1
 [ -f $PKGDIR/README ] && cp -p $PKGDIR/README $OPTDIR
 
 #########
