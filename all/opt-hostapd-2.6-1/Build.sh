@@ -75,10 +75,10 @@ OPTDIR=$DST/$OPTPREFIX
 mkdir -p $OPTDIR/etc/config.flags
 mkdir -p $OPTDIR/etc/config.preconf
 mkdir -p $OPTDIR/rc.d
-echo yes > $OPTDIR/etc/config.flags/example
+echo yes > $OPTDIR/etc/config.flags/hostapd
 echo $PKG > $OPTDIR/pkgversion
-cp -p $PKGDIR/rc $OPTDIR/rc.d/rc.example
-chmod +x $OPTDIR/rc.d/rc.example
+cp -p $PKGDIR/rc $OPTDIR/rc.d/rc.hostapd
+chmod +x $OPTDIR/rc.d/rc.hostapd
 [ -f $PKGDIR/README ] && cp -p $PKGDIR/README $OPTDIR
 
 #########
