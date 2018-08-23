@@ -58,6 +58,7 @@ libtool_fix-1
 # Install into dir under /var/tmp/install
 rm -rf "$DST"
 make install DESTDIR=$DST # --with-install-prefix may be an alternative
+cp $PKGDIR/regulatory.db $DST/lib/firmware || exit 1
 
 #########
 # Convert man-pages
